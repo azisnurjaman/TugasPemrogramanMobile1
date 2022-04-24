@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/HasilNIK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/HasilNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/HasilNIK"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/HasilTmptLahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/HasilNama"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/HasilTglLahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/HasilTmptLahir"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/HasilALamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/HasilTglLahir"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/HasilJK"
+                android:layout_below="@id/HasilALamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/HasilPekerjaan"
+                android:layout_below="@id/HasilJK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/HasilStatus"
+                android:layout_below="@id/HasilPekerjaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_below="@id/HasilStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        android:backgroundTint="#FF4F4F"/>
+
+</RelativeLayout>

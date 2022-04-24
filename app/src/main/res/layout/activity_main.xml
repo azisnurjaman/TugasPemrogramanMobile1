@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrasi"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/LabelNIK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="NIK"
+        android:textColor="@color/black"
+        android:layout_below="@id/Judul"
+        android:textSize="15dp" />
+    <EditText
+        android:id="@+id/NIK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LabelNIK"
+        android:ems="16"
+        android:hint="Masukan NIK anda"
+        android:inputType="text|number" />
+
+    <TextView
+        android:id="@+id/LabelName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:labelFor="@+id/Name"
+        android:text="Nama"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:layout_below="@+id/NIK"/>
+    <EditText
+        android:id="@+id/Nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="100"
+        android:inputType="textPersonName"
+        android:hint="Masukan nama anda"
+        android:layout_below="@+id/LabelName"/>
+
+    <TextView
+        android:id="@+id/LabelTmptLahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:labelFor="@+id/Name"
+        android:text="Tempat Lahir"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:layout_below="@+id/Nama"/>
+    <EditText
+        android:id="@+id/TmptLahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LabelTmptLahir"
+        android:hint="Masukan tempat lahir anda"
+        android:ems="50"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/LabelTglLahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:labelFor="@+id/Name"
+        android:text="Tanggal Lahir"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:layout_below="@+id/TmptLahir"/>
+    <EditText
+        android:id="@+id/TglLahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LabelTglLahir"
+        android:ems="10"
+        android:hint="dd/mm/yy"
+        android:inputType="date|datetime" />
+
+    <TextView
+        android:id="@+id/LabelAlamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:labelFor="@+id/Name"
+        android:text="Alamat"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:layout_below="@+id/TglLahir"/>
+    <EditText
+        android:id="@+id/Alamat"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/LabelAlamat"
+        android:ems="300"
+        android:inputType="text|textMultiLine"
+        android:hint="Masukan alamat anda" />
+
+    <TextView
+        android:id="@+id/jk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Alamat"
+        android:layout_marginTop="1dp"
+        android:text="Jenis Kelamin"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+    <RadioGroup
+        android:id="@+id/RadioBtns01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jk"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/Laki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laki-laki" />
+
+        <RadioButton
+            android:id="@+id/Perempuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perempuan" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Pekerjaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RadioBtns01"
+        android:text="Pekerjaan"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+    <CheckBox
+        android:id="@+id/PNS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Pekerjaan"
+        android:text="PNS"
+        android:onClick="PNS"/>
+    <CheckBox
+        android:id="@+id/PegawaiSwasta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pegawai Swasta"
+        android:layout_below="@id/Pekerjaan"
+        android:layout_toRightOf="@+id/PNS"
+        android:onClick="PegawaiSwasta"/>
+    <CheckBox
+        android:id="@+id/Pelajar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pelajar"
+        android:layout_below="@+id/PNS"
+        android:onClick="Pelajar"/>
+    <CheckBox
+        android:id="@+id/Wiraswasta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wiraswasta"
+        android:layout_below="@+id/PNS"
+        android:layout_toRightOf="@+id/Pelajar"
+        android:onClick="Wiraswasta"/>
+
+    <TextView
+        android:id="@+id/Status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Pelajar"
+        android:text="Status"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+    <RadioGroup
+        android:id="@+id/RadioBtns02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Status"
+        android:orientation="horizontal">
+    <RadioButton
+        android:id="@+id/Kawin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kawin"
+        android:layout_below="@+id/Status"/>
+    <RadioButton
+        android:id="@+id/BlmKawin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/Kawin"
+        android:layout_below="@+id/Status"
+        android:text="Belum Kawin" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RadioBtns02"
+        app:srcCompat="@android:drawable/ic_menu_save"
+        android:backgroundTint="#00AEFF"/>
+
+
+</RelativeLayout>
